@@ -1,0 +1,39 @@
+.card {
+    text-align: Center;
+    height: 150px;
+    justify-content: center;
+}
+
+.training {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.exp {
+    width: 30%;
+    margin: 15px;
+}
+
+.training div p {
+    display: none;
+    font-size: 110%;
+    overflow-y: sroll;
+}
+.training div::-webkit-scrollbar {
+    width: 0px;
+}
+
+.training div:hover>h2 {
+    display: none;
+}
+
+.training div:hover>p {
+    display: block;
+}
+
+.training-alt {
+    width: 70%;
+    flex-direction: row;
+}

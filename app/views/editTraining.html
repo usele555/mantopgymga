@@ -1,0 +1,50 @@
+<a class="edit-btn centered trigger_popup_fricc">
+<img src="../img/_ionicons_svg_md-create.svg" class="edit-pen" alt="editPen">
+</a>
+
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div class="content">
+        <div class="popupCloseButton">X</div>
+        <h2>Lägg till</h2>
+        <form action="/training/add" method="POST" enctype="multipart/form-data">
+            <label for="tag">Vad vill du lägga till?</label>
+            <select name="tag" id="tag">
+                <option value="exp">Passförklaring</option>
+                <option value="anm">Anmälningsgrupp</option>
+                <option value="nyb">Nybliven förälder</option>
+            </select>
+            <label for="name">Namn</label>
+            <input type="text" name="name" id="name" required/>
+            <br>
+            <label for="text">Text</label>
+            <textarea name="text" id="text" rows="5" cols="33" required></textarea>
+            <!--<input type="textarea" rows="5" cols="33" name="text" id="text" required/>-->
+            <br>
+            <input type="submit" value="Lägg till" />
+        </form>
+
+        <!--accordion START-->
+        <h2>Redigera</h2>
+        {% for each in all %}
+        <button class="accordion">{{each.title}}</button>
+        <div class="panel">
+            <form id="editPtForm" class="editPtForm" action="/training/edit" autocomplete="off" method="POST">
+                <input type="hidden" name="editId" value="{{each.id}}" />
+                <label for="name">Namn</label>
+                <input type="text" name="name" id="name" value="{{each.title}}" />
+                <label for="text">Text</label>
+                <!--<input type="textarea" name="text" id="text" value="{{each.text}}">-->
+                <textarea name="text" id="text" value="">{{each.text}}</textarea>
+                <input type="submit" value="Redigera" />
+            </form>
+
+            <form class="delete-btn" action="/training/delete" onsubmit="return confirm('Är du säker på att du vill ta bort?');" method="POST">
+                <input type="hidden" name="deleteId" id="deleteId" value={{each.id}} />
+                <input type="submit" value="Ta bort" />
+            </form>
+        </div>
+        {% endfor %}
+        <!--accordion END-->
+    </div>
+</div>

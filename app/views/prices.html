@@ -1,0 +1,50 @@
+<form id="regForm" action="POST">
+
+    <!-- One "tab" for each step in the form: -->
+    <div class="tab">
+        {% for type in types %}
+        <div class="centered" onclick="nextPrev(1);">
+            <input type="hidden" id="type" name="type" value="type.id"/>
+            <p>{{ type.text }}</p> 
+        </div>
+        <!--<input type="button" class="centered" id="type" onclick="nextPrev(1); count(type.id);" value="{{ type.text }}"></input>-->
+        {% endfor %}
+    </div>
+
+    <div class="tab">
+        {% for length in lengths %}
+        <div class="centered" onclick="nextPrev(1); count(length.id);">
+            <p>{{ type.text }}</p>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="tab">
+        <div class="centered" onclick="nextPrev(1)">
+            <p>Med autogiro</p>
+        </div>
+        <div class="centered" onclick="nextPrev(1)">
+            <p>Utan autogiro</p>
+        </div>
+    </div>
+
+    <div class="tab">
+        <div>4308</div>
+    </div>
+
+    <div style="overflow:auto;">
+        <div style="float:right;">
+            <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+            <!--<button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>-->
+        </div>
+    </div>
+
+    <!-- Circles which indicates the steps of the form: -->
+    <div style="text-align:center;margin-top:40px;">
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+        <span class="step"></span>
+    </div>
+
+</form>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {{ include ('links.html') }}
+    <link rel="icon" href="/img/logo.png">
+    <title>Logga in</title>
+</head>
+
+<body class="centered" style="height:100vh">
+    <div class="main-content centered login">
+        <div class="card">
+            <form class="login-form keepFormData" id="login-form" action="/adminLoginAction" method="POST">
+                <h1 id="black">Logga in</h1>
+                <!--<label for="username">Användarnamn</label>-->
+                <input type="text" name="username" id="username" placeholder="Användarnamn" required/>
+                <br> {% if error == "nousername" %}
+                <p class="error centered">Användernamnet finns inte.</p>
+                {% endif %}
+                <!--<label for="password">Lösenord:</label>-->
+                <input type="password" id="password" name="password" placeholder="Lösenord" /> {% if error == "wrongpassword" %}
+                <p class="error centered">Fel lösenord. Försök igen.</p>
+                {% endif %}
+                <input class="btn" type="submit" name="signin-submit" value="Logga in" />
+                <div class="centered">
+                    <p>eller</p>
+                    <a class="createbtn" href="/resetPassword">Glömt lösenordet?</a>
+                    <p>eller</p>
+                    <a class="createbtn" href="/signup">Skapa nytt konto</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/jquery.keepFormData.min.js"></script>
+</body>
+
+</html>

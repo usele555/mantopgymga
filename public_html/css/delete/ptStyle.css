@@ -1,0 +1,27 @@
+.card {
+    background-color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+    margin: 5px;
+    padding: 10px;
+    /*background-color: rgb(178, 178, 178, 0.75);*/
+}
+
+.pt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-body {
+    display: block;
+}
+
+.pt-holder{
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+}

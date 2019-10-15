@@ -1,0 +1,54 @@
+<a class="edit-btn centered trigger_popup_fricc">
+<img src="../img/_ionicons_svg_md-create.svg" class="edit-pen" alt="editPen">
+</a>
+
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div class="content">
+        <div class="popupCloseButton">X</div>
+        <h2>Lägg till instruktör</h2>
+        <form action="/instruktor/add" method="POST" enctype="multipart/form-data">
+            <label for="name">Namn</label>
+            <input type="text" name="name" id="name" required/>
+            <br>
+            <label for="text">Text</label>
+            <input type="textarea" name="text" id="text" required/>
+            <br>
+            <label for="img">Bild</label>
+            <div id="myDropzone" class="dropzone"></div>
+            <!--<input type="file" name="fileToUpload" onchange="loadFile(event)" id="fileToUpload" accept="image/png, image/jpeg" name="fileToUpload" id="fileToUpload">-->
+            <!--<img id="output" id="target" />-->
+            <input type="submit" id="submit-all" value="Lägg till" />
+        </form>
+
+        <!--accordion START-->
+        <h2>Redigera instruktörer</h2>
+        {% for active in actives %}
+        <button class="accordion">{{active.name}}</button>
+        <div class="panel">
+            <form id="editPtForm" class="editPtForm" action="/instruktor/edit" autocomplete="off" method="POST">
+                <input type="hidden" name="editId" value="{{active.id}}" />
+                <label for="ptName">Namn</label>
+                <input type="text" name="ptName" id="ptName" value="{{active.name}}" />
+                <label for="ptText">Text</label>
+                <!--<textarea Name="ptText" form="editPtForm" id="ptText" cols="40" rows="5">{{Pt.text}}</textarea>-->
+                <input type="textarea" name="ptText" id="ptText" value="{{active.text}}">
+                <label for="ptImg">Bild</label>
+                <p>Bildes namn: {{ active.img }}</p>
+                <!--<input type="file" name="ptImg" id="ptImg" accept="image/*" onchange="loadFile(event)" />-->
+                <!--<img id="output" />-->
+                <!--<input type="file" accept="image/*" onchange="loadFile(event)">-->
+                <!--<img id="output" />-->
+                <div id="myDropzone" class="dropzone"></div>
+                <input type="submit" id="submit-all" value="Spara" />
+            </form>
+
+            <form class="delete-btn" action="/instruktor/delete"  onsubmit="return confirm('Är du säker på att du vill ta bort?');" method="POST">
+                <input type="hidden" name="deleteId" id="deleteId" value={{active.id}} />
+                <input type="submit" value="Ta bort" />
+            </form>
+        </div>
+        {% endfor %}
+        <!--accordion END-->
+    </div>
+</div>

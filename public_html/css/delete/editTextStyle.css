@@ -1,0 +1,10 @@
+.editTextForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.editTextFormTextArea{
+    width: 90%;
+    height: 500%;
+}

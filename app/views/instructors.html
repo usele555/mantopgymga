@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    {{ include ('links.html') }}
+    <link rel="icon" href="/img/logo.png">
+    <title>Mantorp Gym</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Instruktörer</h1>
+        {{ include ('menu.html') }}
+    </div>
+    <!--CONTENT-->
+    <div class="main-content">
+
+        <div class="pt-holder">
+            {% for active in actives %}
+            <div class=" centered">
+                <div class="pt card" style="width:18rem;">
+                    <img class="card-img-top" src="{{ active.img }}" alt="Card image cap">
+                    <hr class="my-4" width="80%">
+                    <div class="">
+                        <h3 class="pt-name">{{ active.name }}</h3>
+                    </div>
+                    <hr class="my-4" width="80%">
+                    <div>
+                        <p class="card-body">{{ active.text }}</p>    
+                    </div>
+                    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+    </div>
+    {{include ("footer.html")}}
+    <!--//CONTENT-->
+
+    <!--JS-->
+    <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>
+    <script type="text/javascript" src="/node_modules/swiper/dist/js/swiper.min.js"></script>
+    <script type="text/javascript" src="/js/main.js?v=2.1"></script>
+    <!--//JS-->
+</body>
+
+</html>

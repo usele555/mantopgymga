@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<link rel="stylesheet" href="../css/generalStyle.css?v=2.1" type="text/css" />-->
+    {{ include ('links.html') }}
+
+    <!--<link rel="stylesheet" href="../css/adminLoginStyle.css" type="text/css" />-->
+    <link rel="icon" href="/img/logo.png">
+
+</head>
+
+<body class="centered" style="height:100vh">
+    <div class="main-content">
+        <form class="create-account-form card centered keepFormData" id="signup-form" action="/adminCreateAction" method="POST">
+            <h1 id="black">Skapa konto</h1>
+            <!--<label for="user">Användarnamn</label>-->
+            <input type="text" name="username" id="username" placeholder="Användarnamn" required/>
+            {% if error == "duplicateusername" %}
+            <div class="error">Användarnamnet finns redan</div>
+            {% endif %}
+            <!--<label for="email">E-postadress</label>-->
+            <input type="text" name="email" id="email" placeholder="E-postadress" required/>
+            
+            {% if error == "invalidemail" %}
+            <div class="error">E-mailadressen är i fel format</div>
+            {% endif %}
+
+            <!--<label for="pass">Lösenord:</label>-->
+            <p>Lösenordet måste innehålla: Minst 1 stor bokstav, 1 siffra och ett specialtecken.</p>
+            <input type="password" id="password" name="password" placeholder="Lösenord" required/>
+            <input type="password" id="password-repeat" name="password-repeat" placeholder="Repetera lösenord" required/>
+            {% if error == "passwordmatch" %}
+                <div class="error">Lösenorden matchar inte</div>
+            {% elseif error == "shortpassword" %}
+                <div class="error">Lösenordet måste vara minst 6 tecken lånt</div>
+            {% elseif error == "nonumberpassword" %}
+                <div class="error">Lösenordet måste innehålla siffror</div>
+            {% elseif error == "nocapspassword" %}
+                <div class="error">Lösenordet måste minst 1 stor bokstav</div>
+            {% elseif error == "nosymbolpassword" %}
+                <div class="error">Lösenordet måste minst 1 specialtecken</div>
+            {% endif %}
+            <!--<label for="token">Token:</label>-->
+            <input type="text" name="token" id="token" placeholder="Token" required />
+            {% if error == "tokenerror" %}
+            <div class="error">Den token du använde är antingen utgången eller felaktig</div>
+            {% endif %}
+            <input type="submit" name="signup-submit" value="Skapa konto" />
+            <title>Skapa konto</title>
+            <p>eller</p>
+            <a class="createbtn" href="/login">Logga in</a>
+        </form>
+    </div>
+    
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/jquery.keepFormData.min.js"></script>
+</body>
+
+</html>

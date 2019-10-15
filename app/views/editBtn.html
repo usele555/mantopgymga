@@ -1,0 +1,52 @@
+<a class="edit-btn centered trigger_popup_fricc">
+<img src="../img/_ionicons_svg_md-create.svg" class="edit-pen" alt="editPen">
+</a>
+
+<div class="hover_bkgr_fricc">
+    <span class="helper"></span>
+    <div class="content">
+        
+        <span class="popupCloseButton">X</span>
+
+        <h2>Lägg till nyhet</h2>
+        <form action="/news/add"  method="POST" >
+            <!--<label for="title">Titel</label>-->
+            <input type="text" name="title" id="title" placeholder="Titel" required/>
+            <br><br>
+            <!--<label for="text">Text</label>-->
+            <textarea name="text" id="news-text" rows="5" cols="33" placeholder="Text" required></textarea>
+            <br><br>
+            <div id="myDropzone" class="dropzone"></div>
+            <input type="submit" id="submit-all" name=""  value="Lägg till"/>
+        </form>
+
+        <!--accordion START-->
+        <h2>Redigera nyheter</h2>
+
+        {% for active in actives %}
+
+        <button class="accordion">{{ active.title }}</button>
+        <div class="panel">
+            <form id="editNewsForm" class="editNewsForm" action="/news/edit" autocomplete="off" method="POST">
+                <input type="hidden" name="editId" value="{{active.id}}" />
+                <label for="newsTitle">Titel</label>
+                <input type="text" name="newsTitle" id="newsTitle" value="{{active.title}}" /></br>
+                <label for="newsText">Text</label>
+                <!--<textarea name="newsText" form="editNewsForm" id="newsText" cols="5" rows="1">{{active.text}}</textarea>-->
+                
+                <textarea name="newsText" id="newsText" rows="5" cols="33" value="">{{active.text}}</textarea>
+                <!--IMG UPLOAD-->
+                <div id="myDropzone" class="dropzone"></div>
+                <input type="submit" id="submit-all" name=""  value="Spara"/>
+            </form>
+
+            <form class="delete-btn" action="/news/delete" onsubmit="return confirm('Är du säker på att du vill ta bort?');" method="POST">
+                <input type="hidden" name="deleteId" id="deleteId" value={{active.id}} />
+                <input type="hidden" name="deleteImg" id="deleteImg" value={{active.img}} />
+                <input type="submit" value="Ta bort" />
+            </form>
+        </div>
+        {% endfor %}
+        <!--accordion END-->
+    </div>
+</div>

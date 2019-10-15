@@ -1,0 +1,5 @@
+<form class="editTextForm" name="editTextForm" style="display:none" method="POST" action="/content/edit">
+    <input type="hidden" name="indexContentId" id="indexContentId" value="{{ content.id }}" />
+    <textarea class="editTextFormTextArea tinymce-textarea" name="indexContentText"  id="indexContentText">{{ content.text }}</textarea>
+    <input class="indexContentSubmitBtn" type="submit" value="Spara" />
+</form>

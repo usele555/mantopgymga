@@ -1,0 +1,32 @@
+body{
+  height: 100vh;
+}
+
+.wrapper{
+  width: 30%;
+  flex-direction: column;
+}
+
+.styleguide-headers{
+  border-bottom: solid thin ;  
+  width: 100%;
+}
+
+.color{
+  width: 10vw;
+  height: 5vh;
+}
+
+.blue{
+  background: #004eb0;
+}
+
+.grey{
+  background: rgba(51, 51, 51, 0.85);
+}
+
+@media(min-width:1200px){
+  .wrapper{
+    align-items: center;
+  }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> {{ include ('links.html') }}
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="../img/logo.png">
+    <title>Mantorp Gym</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Priser & Öppettider</h1>
+        {{include ("adminMenu.html")}}
+    </div>
+  
+    <!--CONTENT-->
+    <div class="main-content">
+        <!--<h1>Priser & Öppettider</h1>-->
+        <!------>
+        <div class="times card">
+            <div class="card-header">
+                <h3>Öppettider</h3>
+            </div>
+            <div class="card-content">
+                {% for content in times %}
+                <a class="edit-btn centered indexContentBtn">
+                    <img src="../img/_ionicons_svg_md-create.svg" class="edit-pen" alt="editPen">
+                </a> {{ include ('editText.html') }}
+                <div class="contentText">{{ content.text|raw }}</div>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="prices card">
+            <div class="card-header">
+                <h3>Priser</h3>
+            </div>
+            <div class="card-content">
+                {% for content in prices %}
+                <a class="edit-btn centered indexContentBtn-prices">
+                    <img src="../img/_ionicons_svg_md-create.svg" class="edit-pen" alt="editPen">
+                </a> {{ include ('editText_2.html') }}
+                <div class="contentText-prices">{{ content.text|raw }}</div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {{include ("footer.html")}}
+    <!------>
+    <!--CONTENT END-->
+    <!--JS-->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/main.js?v=2.1"></script>
+    <script src="../js/editTextBtn.js"></script>
+    <script src="../js/tinymce/tinymce.min.js"></script>
+    <script src="../js/tinymceSettings.js"></script>
+    <!--<script type="text/javascript" src="../js/popup.js"></script>-->
+    <!--<script type="text/javascript" src="../js/accordion.js"></script>-->
+    <script src="../js/prices.js"></script>
+    <!--//JS-->
+</body>
+
+</html>

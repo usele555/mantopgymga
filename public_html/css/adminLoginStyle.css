@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: black;
+}
+.login-form {
+    /*width: 20vw;*/
+    background: white;
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+    /*align-items: center;*/
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form input {
+    border:1px solid grey;
+    border-radius:2px;
+    padding: 2px;
+}
+
+.createbtn{
+    color: black;
+
+}
+
+.create-account-form{
+    padding: 2vw;
+}
+
+.wrongpassword , .missingusername{
+    display: none;
+}
+
+.login{
+    height: 100vh;
+}

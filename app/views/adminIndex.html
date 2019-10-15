@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!--LIBRARIES-->
+    <link rel="stylesheet" href="../node_modules/swiper/dist/css/swiper.min.css" type="text/css" />
+    <link rel="stylesheet" href="../css/imgareaselect.css">
+    <link rel="stylesheet" href="../css/squeezeBox.css" type="text/css" />
+    <link rel="stylesheet" href="../css/dropzone.css" type="text/css" />
+    <link rel="stylesheet" href="../css/cropper.min.css" type="text/css" />
+    <!--LIBRARIES END-->
+
+    {{ include ('links.html')}}
+    <link rel="icon" href="../img/logo.png" type="text/css" />
+    <title>Mantorp Gym</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Startsida</h1>
+    </div>
+    {% include 'adminMenu.html' %}
+    <!--MAIN CONTENT-->
+    <div class="main-content">
+        <!--SWIPER-->
+        {{ include ('editBtn.html') }}
+        <div class="swiper-container">
+
+            <div class="swiper-wrapper">
+                {% for news in current %}
+                <div class="swiper-slide">
+                    {% if news.img %}
+                    <div class="slide-left">
+                        <img class="newsImg" src="{{ news.img }}" alt="">
+                    </div>
+                    {% endif %}
+                    <div class="slide-right">
+                        <div class="card-text">
+                            <h2>{{ news.title }}</h2>
+                            <p id="news-text">{{ news.text }}</p>
+                        </div>
+                        <div class="card-footer">
+                            <p class="footer-text">Publicerad {{ news.created_at }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <!--END SWIPER-->
+        {% for content in indexContent %}
+        <div class="intro card">
+            <a class="edit-btn centered indexContentBtn">
+                <img src="../img/_ionicons_svg_md-create.svg" class="edit-pen" alt="editPen">
+            </a> {{ include ('editText.html') }}
+            <div class="contentText">{{ content.text|raw }}</div>
+        </div>
+        {% endfor %}
+
+        <!--<div class="card centered" style="width:80%;">-->
+        <!--    <img src="../img/100.jpg">-->
+        <!--    <p>Mantorp gym är en av de träningsanläggninar som ingår i 100% Ren hårdträning, där träningsanläggningar, polis och kommun samarbetar för en träning mot dopning. Detta innebär att Mantorp gym arbetar aktivt för att vara en dopningsfri anläggning.-->
+        <!--        <br><b>POLICY</b><br> Vi har en gemensam policy med de andra gymmen i vårt nätverk, Mjölby Träningsstudio, Lundbybadet, Mjölby Hälsocenter, CrossFit Mjölby, Medius Gym, Fitness4you och Energihuset i Ödeshög. Vår anläggning arbetar aktivt-->
+        <!--        för att vara fri från dopning. Vi tar helt avstånd från användande av otillåtna preparat. Vår definition av dopningsmedel är den samma som Lagen om förbud mot vissa dopningsmedel (1991:1969). Vi står för ren och hälsosam träning utan dopningsmedel,-->
+        <!--        alkohol och narkotika. Denna policy är känd av vår personal som har gått utbildning i att hantera situationer där misstanke om bruk uppstått.</p>-->
+        <!--</div>-->
+
+        <!--IMG EDIT-->
+        <form action="/images/add" class="centered image-form" method="POST" class="centered">
+            <div style="width:100%" id="myDropzone" class="dropzone"></div>
+            <input type="submit" id="submit-all" name="" value="Ladda upp" />
+        </form>
+        <form action="/images/delete" method="POST" onsubmit="return confirm('Är du säker på att du vill ta bort?');" class="centered">
+            <div class="gallery-div">
+                {% for image in images %}
+                <!--<input type="hidden" name="deleteImg[]" id="deleteImg" value={{image.img}} />-->
+                <input type="checkbox" id="{{image.id}}" name="deleteId[]" value="{{image.id}}, {{image.img}}" />
+                <label class="centered" for="{{image.id}}"><img src="{{image.img}}" /></label> {% endfor %}
+            </div>
+            <input id="del-img" type="submit" value="Ta bort bilder" />
+        </form>
+        <!--IMG EDIT END-->
+
+    </div>
+    {{include ("footer.html")}}
+
+    <!--</div>-->
+    <!--JS-->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../js/accordion.js"></script>
+    <script src="../js/editTextBtn.js"></script>
+    <script src="../js/tinymce/tinymce.min.js"></script>
+    <script src="../js/tinymceSettings.js"></script>
+    <script src="../node_modules/swiper/dist/js/swiper.min.js"></script>
+    <script src="../js/swiper.js?v=2.1"></script>
+    <script src="../js/popup.js"></script>
+    <!--IMAGE UPLOAD-->
+    <script src="../js/dropzone.js"></script>
+    <script src="../js/cropper.min.js"></script>
+    <script src="../js/upload.js"></script>
+    <script>
+        // function addNewLines(){
+        //     console.log('breakText');
+        //     let text = document.getElementById('news-text').value;
+        //     text = text.replace(/  /g, "[sp][sp]");
+        //     document.getElementById("news-text").value.replace(/\n/g,'<br>')
+        // }
+        
+    </script>
+
+    <!--//JS-->
+</body>
+
+</html>

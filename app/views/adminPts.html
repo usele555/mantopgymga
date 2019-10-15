@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <!--LIBRARIES-->
+    <link rel="stylesheet" href="../css/dropzone.css" type="text/css" />
+    <link rel="stylesheet" href="../css/cropper.min.css" type="text/css" />
+    <!--LIBRARIES END-->
+    
+    {{ include ('links.html') }}
+    <link rel="icon" href="/img/logo.png">
+    <title>Mantorp Gym</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Personlig Tränare</h1>
+    </div>
+    {{include ("adminMenu.html")}}
+
+    <!--CONTENT-->
+    <div class="main-content">
+        <!--<div class="intro">-->
+            {{ include ('editPts.html') }}
+        <!--</div>-->
+        <div class="pt-holder">
+            {% for pt in pts %}
+            <div class="centered">
+                <div class="pt card" style="width:18rem;">
+                    <img class="card-img-top" src="{{ pt.img }}" alt="Card image cap">
+                    <hr class="my-4" width="80%">
+                    <div class="">
+                        <h3 class="pt-name">{{ pt.name }}</h3>
+                    </div>
+                    <hr class="my-4" width="80%">
+                    <div>
+                        <p class="card-body">{{ pt.text }}</p>
+                    </div>
+                    
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        {% for content in contents %}
+        <div class="intro card">
+            <a class="edit-btn centered indexContentBtn">
+                <img src="../img/_ionicons_svg_md-create.svg" class="edit-pen" alt="editPen">
+            </a> {{ include ('editText.html') }}
+            <div class="contentText">{{ content.text|raw }}</div>
+        </div>
+        {% endfor %}
+
+    </div>
+    {{include ("footer.html")}}
+    <!--//CONTENT-->
+
+    <!--JS-->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <!--<script src="https://unpkg.com/ionicons@4.4.7/dist/ionicons.js"></script>-->
+
+    <!--<script src="../js/main.js?v=2.1"></script>-->
+    <script src="../js/editTextBtn.js"></script>
+    <script src="../js/tinymce/tinymce.min.js"></script>
+    <script src="../js/tinymceSettings.js"></script>
+
+    <script src="../js/popup.js"></script>
+    <script src="../js/accordion.js"></script>
+
+
+    <!--IMAGE UPLOAD-->
+    <script src="../js/dropzone.js"></script>
+    <script src="../js/cropper.min.js"></script>
+    <script src="../js/upload.js"></script>
+    <!--//JS-->
+</body>
+
+</html>

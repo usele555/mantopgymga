@@ -1,0 +1,5 @@
+<form class="editTextForm-prices" name="editTextForm" style="display:none" method="POST" action="/content/edit">
+    <input type="hidden" name="indexContentId" id="indexContentId" value="{{ content.id }}" />
+    <textarea class="editTextFormTextArea" name="indexContentText" id="indexContentText">{{ content.text|raw }}</textarea>
+    <input class="indexContentSubmitBtn" type="submit" value="Spara" />
+</form>

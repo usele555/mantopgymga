@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../css/accountManager.css" type="text/css" /> {{ include ('links.html') }}
+    <link rel="icon" href="/img/logo.png">
+    <title>Hantera konton</title>
+</head>
+
+<body>
+    <div class="header">
+        <h1>Administratörsalternativ</h1>
+    </div>
+    {{ include ('adminMenu.html') }}
+    <div class="main-content am">
+        {% for user in active %}
+        <div class=" card centered">
+            <p>Användarnamn: {{ user.username }}</p>
+            <p>Ändra lösenord</p>
+            <form action="/admin/editPassword" method="POST">
+                <label>Nuvarande lösenord:</label>
+                <input class="password-field" type="password" class="form-control" name="old-password" />
+                <label>Nytt lösenord:</label>
+                <input class="password-field" type="password" class="form-control" name="new-password" />
+                <label>Repetera nytt lösenord:</label>
+                <input class="password-field" type="password" class="form-control" name="new-password-repeat" />
+                <input type="submit" name="" value="Spara" />
+            </form>
+        </div>
+        {% endfor %} {% if admin_access == 1 %}
+
+        <h2>Generera inloggninstoken</h2>
+        <div class="card centered">
+            {% for token in tokens %}
+            <p>Token: {{ token.token }}</p>
+            {% endfor %}
+            <!--<p>Din token har gått ut</p>-->
+
+
+            <form action="/admin/createToken" method="POST">
+                <input type="submit" name="createTokenSubmit" value="Generera ny token" />
+            </form>
+        </div>
+        {% if admins %}
+        <h2>Användare</h2>
+        {% endif %} 
+        
+        {% for admin in admins %}
+        <div class="card centered">
+            <p>Användarnamn: {{ admin.username }}</p>
+            <form action="/admin/editAccountAction" method="POST" onsubmit="return confirm('Är du säker på att du vill ta bort?');">
+                <input type="hidden" name="accountId" value="{{admin.id}}" />
+                <input type="submit" name="removeAccount" value="Ta bort konto" />
+            </form>
+        </div>
+        {% endfor %} {% endif %}
+
+
+    </div>
+    {{include ("footer.html")}}
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script>
+
+        $(function() {
+            if (window.location.hash === "#load-stuff") {
+                $('.my_class').load('my/url/path/with/content/to/load');
+            }
+        });
+    </script>
+</body>
+
+</html>

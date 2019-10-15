@@ -1,0 +1,91 @@
+[27-Dec-2018 12:34:49 UTC] PHP Warning:  require_once(conn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/backend/actions/deleteNewsAction.php on line 2
+[27-Dec-2018 12:34:49 UTC] PHP Fatal error:  require_once(): Failed opening required 'conn.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/backend/actions/deleteNewsAction.php on line 2
+[07-Jan-2019 09:56:44 UTC] PHP Notice:  Undefined index: newsTitle in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 09:56:44 UTC] PHP Notice:  Undefined index: newsText in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 09:56:44 UTC] PHP Notice:  Undefined index: editId in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 6
+[07-Jan-2019 10:06:12 UTC] PHP Notice:  Undefined index: newsTitle in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:06:12 UTC] PHP Notice:  Undefined index: newsText in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:06:12 UTC] PHP Notice:  Undefined index: editId in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 6
+[07-Jan-2019 10:07:02 UTC] PHP Notice:  Undefined index: newsTitle in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:07:02 UTC] PHP Notice:  Undefined index: newsText in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:07:02 UTC] PHP Notice:  Undefined index: editId in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 6
+[07-Jan-2019 10:07:29 UTC] PHP Notice:  Undefined index: newsTitle in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:07:29 UTC] PHP Notice:  Undefined index: newsText in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:07:29 UTC] PHP Notice:  Undefined index: editId in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 6
+[07-Jan-2019 10:08:29 UTC] PHP Notice:  Undefined index: newsTitle in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:08:29 UTC] PHP Notice:  Undefined index: newsText in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:08:29 UTC] PHP Notice:  Undefined index: editId in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 6
+[07-Jan-2019 10:08:31 UTC] PHP Notice:  Undefined index: newsTitle in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:08:31 UTC] PHP Notice:  Undefined index: newsText in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:08:31 UTC] PHP Notice:  Undefined index: editId in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 6
+[07-Jan-2019 10:08:51 UTC] PHP Notice:  Undefined index: newsTitle in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:08:51 UTC] PHP Notice:  Undefined index: newsText in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:08:51 UTC] PHP Notice:  Undefined index: editId in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 6
+[07-Jan-2019 10:09:06 UTC] PHP Notice:  Undefined index: newsTitle in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:09:06 UTC] PHP Notice:  Undefined index: newsText in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 5
+[07-Jan-2019 10:09:06 UTC] PHP Notice:  Undefined index: editId in /home/ubuntu/workspace/backend/actions/editNewsAction.php on line 6
+[07-Jan-2019 10:09:14 UTC] PHP Warning:  require_once(conn.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 2
+[07-Jan-2019 10:09:14 UTC] PHP Fatal error:  require_once(): Failed opening required 'conn.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 2
+[08-Jan-2019 12:20:58 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[08-Jan-2019 12:20:58 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[08-Jan-2019 12:24:05 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[08-Jan-2019 12:24:05 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[08-Jan-2019 12:24:53 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[08-Jan-2019 12:24:53 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[08-Jan-2019 12:33:19 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[08-Jan-2019 12:33:19 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[08-Jan-2019 12:45:05 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[08-Jan-2019 12:45:05 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[08-Jan-2019 12:47:31 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[08-Jan-2019 12:47:31 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[08-Jan-2019 20:05:09 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[08-Jan-2019 20:05:09 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[10-Jan-2019 10:54:57 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[10-Jan-2019 10:54:57 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[10-Jan-2019 10:57:39 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[10-Jan-2019 10:57:39 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[11-Jan-2019 07:01:08 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[11-Jan-2019 07:01:08 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[11-Jan-2019 07:01:25 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[11-Jan-2019 07:01:25 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[11-Jan-2019 07:01:44 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 10
+[11-Jan-2019 07:01:44 UTC] PHP Notice:  Undefined index: indexContentTitle in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[11-Jan-2019 07:21:07 UTC] PHP Warning:  require_once(../backend/HTMLPurifier/library/HTMLPurifier.auto.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 3
+[11-Jan-2019 07:21:07 UTC] PHP Fatal error:  require_once(): Failed opening required '../backend/HTMLPurifier/library/HTMLPurifier.auto.php' (include_path='.:/usr/share/php') in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 3
+[11-Jan-2019 07:21:21 UTC] PHP Warning:  Use of undefined constant indexContentText - assumed 'indexContentText' (this will throw an Error in a future version of PHP) in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 13
+[11-Jan-2019 07:21:26 UTC] PHP Warning:  Use of undefined constant indexContentText - assumed 'indexContentText' (this will throw an Error in a future version of PHP) in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 13
+[11-Jan-2019 07:22:04 UTC] PHP Warning:  Use of undefined constant indexContentText - assumed 'indexContentText' (this will throw an Error in a future version of PHP) in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 13
+[11-Jan-2019 07:23:25 UTC] PHP Warning:  Use of undefined constant indexContentText - assumed 'indexContentText' (this will throw an Error in a future version of PHP) in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 13
+[11-Jan-2019 07:39:24 UTC] PHP Warning:  Use of undefined constant indexContentText - assumed 'indexContentText' (this will throw an Error in a future version of PHP) in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 13
+[11-Jan-2019 07:39:29 UTC] PHP Warning:  Use of undefined constant indexContentText - assumed 'indexContentText' (this will throw an Error in a future version of PHP) in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 13
+[11-Jan-2019 07:40:07 UTC] PHP Warning:  Use of undefined constant indexContentText - assumed 'indexContentText' (this will throw an Error in a future version of PHP) in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 13
+[11-Jan-2019 07:40:19 UTC] PHP Warning:  Use of undefined constant indexContentText - assumed 'indexContentText' (this will throw an Error in a future version of PHP) in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 13
+[11-Jan-2019 07:42:22 UTC] PHP Warning:  Use of undefined constant indexContentText - assumed 'indexContentText' (this will throw an Error in a future version of PHP) in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 14
+[11-Jan-2019 11:49:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function runQuery(), 2 passed in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 19 and exactly 3 expected in /home/ubuntu/workspace/backend/conn.php:25
+Stack trace:
+#0 /home/ubuntu/workspace/backend/actions/editIndexContent.php(19): runQuery('UPDATE indexCon...', false)
+#1 {main}
+  thrown in /home/ubuntu/workspace/backend/conn.php on line 25
+[14-Jan-2019 09:30:48 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function runQuery(), 2 passed in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 19 and exactly 3 expected in /home/ubuntu/workspace/backend/conn.php:25
+Stack trace:
+#0 /home/ubuntu/workspace/backend/actions/editIndexContent.php(19): runQuery('UPDATE indexCon...', false)
+#1 {main}
+  thrown in /home/ubuntu/workspace/backend/conn.php on line 25
+[14-Jan-2019 09:43:44 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function runQuery(), 2 passed in /home/ubuntu/workspace/backend/actions/editIndexContent.php on line 19 and exactly 3 expected in /home/ubuntu/workspace/backend/conn.php:25
+Stack trace:
+#0 /home/ubuntu/workspace/backend/actions/editIndexContent.php(19): runQuery('UPDATE indexCon...', false)
+#1 {main}
+  thrown in /home/ubuntu/workspace/backend/conn.php on line 25
+[14-Jan-2019 09:49:46 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function runQuery(), 2 passed in /home/ubuntu/workspace/backend/actions/deleteNewsAction.php on line 9 and exactly 3 expected in /home/ubuntu/workspace/backend/conn.php:25
+Stack trace:
+#0 /home/ubuntu/workspace/backend/actions/deleteNewsAction.php(9): runQuery(' DELETE FROM ne...', false)
+#1 {main}
+  thrown in /home/ubuntu/workspace/backend/conn.php on line 25
+[14-Jan-2019 09:49:49 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function runQuery(), 2 passed in /home/ubuntu/workspace/backend/actions/deleteNewsAction.php on line 9 and exactly 3 expected in /home/ubuntu/workspace/backend/conn.php:25
+Stack trace:
+#0 /home/ubuntu/workspace/backend/actions/deleteNewsAction.php(9): runQuery(' DELETE FROM ne...', false)
+#1 {main}
+  thrown in /home/ubuntu/workspace/backend/conn.php on line 25
+[24-Jan-2019 09:28:06 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/backend/actions/sendEmail.php on line 6
+[24-Jan-2019 09:32:33 UTC] PHP Notice:  Undefined variable: name in /home/ubuntu/workspace/backend/actions/sendEmail.php on line 19
+[24-Jan-2019 09:32:54 UTC] PHP Notice:  Undefined variable: first_name in /home/ubuntu/workspace/backend/actions/sendEmail.php on line 23

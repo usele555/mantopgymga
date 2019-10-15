@@ -1,0 +1,88 @@
+body {
+    overflow: scroll;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+.wrapper {
+    overflow: scroll;
+}
+
+.container-fluid {
+    padding: 10px;
+}
+
+.form input,
+.form textarea,
+.form select {
+    padding: 12px 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border: 2px solid grey;
+}
+
+.form form {
+    background-color: rgb(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    width: 100%;
+}
+
+.form a {
+    color: black;
+}
+
+.map-header h2 {
+    color: white;
+}
+
+#submit {
+    background-color: #c12c2c;
+    border: 3px solid white;
+    border-radius: 3px;
+    color: white;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+#submit:hover {
+    background-color: white;
+    border: 3px solid #c12c2c;
+    color: black;
+}
+
+.map-header {
+    display: flex;
+    justify-content: center;
+}
+
+.main {
+    width: 100%;
+}
+
+
+
+@media (min-width: 640px) {
+
+    .form {
+        /*width: 70vw !important;*/
+    }
+
+    .main {
+        width: 80%;
+    }
+}

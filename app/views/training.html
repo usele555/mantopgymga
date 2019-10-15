@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> {{ include('links.html') }}
+    <link rel="icon" href="../img/logo.png" type="text/css" />
+    <title>Mantorp Gym</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>Träning</h1>
+        {{ include ('menu.html') }}
+    </div>
+
+
+    <div class="main-content training">
+        <div class="training-alt centered">
+            <button class="btn" onclick="pass('flex','none','none')">Passförklaring</button>
+            <button class="btn" onclick="pass('none','flex','none')">Anmälningsgrupper</button>
+            <button class="btn" onclick="pass('none','none','flex')">Nybliven förälder</button>
+        </div>
+
+        {% for exp in training %}
+        <div class="card exp">
+            <h2 id="tR">{{ exp.title }}</h2>
+            <p id="tT">{{ exp.text }}</p>
+        </div>
+        {% endfor %} {% for a in anm %}
+        <div class="card anm">
+            <h2 id="tR">{{ a.title }}</h2>
+            <p id="tT">{{ a.text }}</p>
+        </div>
+        {% endfor %} {% for parent in parents %}
+        <div class="card parent">
+            <h2 id="tR">{{ parent.title }}</h2>
+            <p id="tT">{{ parent.text }}</p>
+        </div>
+        {% endfor %}
+        <!--</div>-->
+    </div>
+    {{include ("footer.html")}}
+
+    <script type="text/javascript" src="../js/training.js"></script>
+</body>
+
+</html>

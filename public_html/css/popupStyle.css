@@ -1,0 +1,142 @@
+/* Popup box BEGIN */
+
+.hover_bkgr_fricc {
+    background: rgba(0, 0, 0, .4);
+    justify-content: center;
+    align-items: center;
+    /*cursor:pointer;*/
+    display: none;
+    height: 100%;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+}
+
+.news-div {
+    display: none;
+}
+
+.news-popup {
+    display: none;
+    padding: 20px;
+    height: 40vh;
+    justify-content:space-around;
+    align-items:center;
+    cursor: pointer;
+}
+
+.news-popup div{
+    width:100%;
+}
+
+.hover_bkgr_fricc .helper {
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+
+}
+
+.hover_bkgr_fricc>div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 2px;
+    /*padding: 15px 5%;*/
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+.popupCloseButton {
+    display: flex;
+    background-color: #fff;
+    border: solid #7a7a7a;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: fixed;
+    top: 8%;
+    right: 19%;
+    font-size: 125%;
+    line-height: 30px;
+    width:2vw;
+    height: 2vw;
+    text-align: center;
+}
+
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    /*margin: 20px;*/
+    display: inline-block;
+    font-weight: bold;
+}
+
+/* Popup box END */
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1px;
+}
+
+.content::-webkit-scrollbar {
+    width: 0px;
+}
+
+.editNewsForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*.active, .accordion:hover {*/
+
+/*  background-color: #ccc; */
+
+/*}*/
+
+/*.panel {*/
+
+/*  padding: 0 18px;*/
+
+/*  display: none;*/
+
+/*  background-color: white;*/
+
+/*overflow: hidden;*/
+
+/*}*/
+
+/*@media(min-width:640px) {*/
+/*    .content {*/
+/*        width: 100vw;*/
+/*    }*/
+/*}*/
+
+/*@media(min-width:1200px) {*/
+/*    .content {*/
+/*        width: 100vw;*/
+/*    }*/
+
+/*}*/

@@ -1,0 +1,91 @@
+.edit-btn {
+    background-color: #0063ba;
+    padding: 10px;
+    border-radius: 100%;
+    position: absolute;
+    z-index: 50;
+    right: 3%;
+    cursor: pointer;
+    top: 70px;
+
+}
+
+.edit-pen {
+    width: 20px;
+    height: 20px;
+
+}
+
+/*.indexContentSubmitBtn {*/
+
+/*    margin-bottom: 1vh;*/
+
+/*    margin-top: 1vh;*/
+
+/*    background-color: #4CAF50;*/
+
+/* Green */
+
+/*    border: none;*/
+
+/*    color: white;*/
+
+/*    padding: 15px 32px;*/
+
+/*    text-align: center;*/
+
+/*    text-decoration: none;*/
+
+/*    display: inline-block;*/
+
+/*    font-size: 16px;*/
+
+/*    cursor: pointer;*/
+
+/*}*/
+
+.indexContentSubmitBtn:hover {
+    background-color: #347c37;
+}
+
+.edittextformtextarea {
+    display: none;
+}
+
+
+html,
+body {
+    margin: 0;
+}
+
+/*ACCORDION*/
+
+* {
+    box-sizing: border-box;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+}
+
+.active,
+.accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
